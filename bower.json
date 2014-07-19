@@ -1,0 +1,24 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "authors": [
+    "cr79 <pistenprinz@googlemail.com>"
+  ],
+  "description": "my homepage",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.10.x",
+    "normalize-css": "~3.0.0"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
