@@ -110,7 +110,6 @@ ul, menu, dir
 }
 
 /* home block */
-
 .home:before {
   content:"";
   position:absolute;
@@ -132,25 +131,43 @@ ul, menu, dir
   transform:rotate(45deg) translate3d(0,0,0)}
   @-webkit-keyframes arrow-fade{from{bottom:48px;opacity:0}5%{opacity:1}to{bottom:0;opacity:0}}
   @-moz-keyframes arrow-fade{from{bottom:48px;opacity:0}5%{opacity:1}to{bottom:0;opacity:0}}
-  @keyframes arrow-fade{from{bottom:48px;opacity:0}5%{opacity:1}to{bottom:0;opacity:0}}.home:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.25)}
+  @keyframes arrow-fade{from{bottom:48px;opacity:0}5%{opacity:1}to{bottom:0;opacity:0}
+ }
+.speaker:after,
+.home:after
+{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.25)}
 
 .home
 {
   //background: #F0F1F2;
   min-height: 100%;
-  position: relative;
-  background: #002b36;
-  //color: #333;
-  background-image: url("../img/bg_speak_small.jpg");
+  background-image: url("../img/bg_cv_small.jpg");
   background-repeat: no-repeat;
   //background-position: 50% 50%;
   background-position: center center;
-  background-attachment: scroll;
+  background-attachment: fixed;
     //background-size: 100%;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_speak.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_speak.jpg', sizingMethod='scale')";
 
+
+  @media only screen and (max-height: 479px)
+  {
+    height: 480px !important;
+  }
+
+  @media only screen and (min-width: 1025px)
+  {
+    background-image: url("../img/bg_cv.jpg");
+  }
+
+}
+
+.home,
+.speaker
+{
+  position: relative;
   h1
   {
     position: absolute;
@@ -166,17 +183,23 @@ ul, menu, dir
     text-shadow: 1px 1px 8px #000;
     margin-top: -24px;
   }
-  @media only screen and (max-height: 479px)
-  {
-    height: 480px !important;
-  }
+}
+.speaker
+{
+
+  background-image: url("../img/bg_speak_small.jpg");
+  background-repeat: no-repeat;
+  //background-position: 50% 50%;
+  background-position: center center;
+  background-attachment: fixed;
+  //background-size: 100%;
+  background-size: cover;
+  min-height: 100%;
 
   @media only screen and (min-width: 1025px)
   {
-    background-attachment: fixed;
     background-image: url("../img/bg_speak.jpg");
   }
-
 }
 
 .social-links
@@ -212,6 +235,10 @@ ul, menu, dir
   width: 100%;
   background-color: #002b36;
   margin-bottom: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
   a
   {
     font-size: 10px;
@@ -243,4 +270,3 @@ ul, menu, dir
     margin-bottom: 10px;
   }
 }
-

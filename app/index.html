@@ -15,16 +15,17 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/csscv.css">
     <!-- endbuild -->
-
+    <script src="js/modernizr.custom.93280.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
   </head>
-  <body>
-
-	<section id="home" class="home">
+  <body >
+	<section id="home" class="home parallax" data-center="background-position: 50% 0px;"
+             data-top-bottom="background-position: 50% -300px;"
+             data-anchor-target="#home">
 
         <ul class="social-links">
             <li>
@@ -38,10 +39,16 @@
             </li>
         </ul>
 
-        <h1>Front-end Engineer</h1>
+        <h1  data-center="bottom: 200px; opacity: 1"
+             data-top="bottom: 1500px; opacity: 0"
+             data-anchor-target="#home h1">Front-end Engineer</h1>
+
 	</section>
 
+
+
 	<section id="about" class="about csscv">
+
     <h1 class="comment-block  spaced--large">
         <span class="comment-block__line">Hi there, I’m Christoph. I am a Front-end Developer, CSS-Architect,</span>
         <span class="comment-block__line">aspiring writer and upcoming speaker from Germany.</span>
@@ -82,7 +89,7 @@
 
     </div>
 
-    <div class="ruleset  spaced--large">
+    <div class="ruleset">
 
         <h3 class="selector"><span class="element" data-namespace="me">Contact</span></h3>
 
@@ -128,20 +135,14 @@
 
     </div>
 
-    <div class="ruleset">
-        <h4 class="selector"><span class="modifier" data-namespace="job">trv</span></h4>
+    <div class="ruleset spaced--large">
+        <h4 class="selector"><span class="modifier" data-namespace="job">current</span></h4>
         <dl class="declarations">
             <dt class="property">Company</dt>
             <dd class="value"><span class="string">trivago GmbH</span></dd>
 
             <dt class="property">Title</dt>
             <dd class="value"><span class="string">Front-end Developer</span></dd>
-
-            <dt class="property">From</dt>
-            <dd class="value"><span class="string">November, 2012</span></dd>
-
-            <dt class="property">To</dt>
-            <dd class="value"><span class="string">Present</span></dd>
 
             <dt class="property">Responsibilities</dt>
             <dd class="value">
@@ -151,144 +152,106 @@
                     <li><span class="string">Front-end Architecture</span></li>
                     <li>Lead-Developer</li></ul></dd>
 
-            <!--<dt class="property">Notes</dt>
-            <dd class="value"><span class="string"></span></dd>-->
-
         </dl>
 
     </div>
 
-    <div class="ruleset">
-
-        <h4 class="selector"><span class="modifier" data-namespace="job">int</span></h4>
-
-        <dl class="declarations">
-
-            <dt class="property">Company</dt>
-            <dd class="value"><span class="string">Intentive GmbH</span></dd>
-
-            <dt class="property">Title</dt>
-            <dd class="value"><span class="string">Web Developer</span></dd>
-
-            <dt class="property">From</dt>
-            <dd class="value"><span class="string">November, 2011</span></dd>
-
-            <dt class="property">To</dt>
-            <dd class="value"><span class="string">October, 2012</span></dd>
-
-            <dt class="property">Responsibilities</dt>
-            <dd class="value">
-                <ul class="value-list">
-                    <li>Prototyping</li>
-                    <li><span class="string">Reddot / OTMS Development</span></li>
-                    <li><span class="string">OTDS Development</span></li>
-                    <li>Java</li>
-                    <li>UI</li>
-                    <li><span class="string">Frontend Development</span></li>
-                    <li>PHP</li>
-                    <li>Accessibility</li>
-                    <li><span class="string">Customer Support</span></li></ul></dd>
 
 
 
-        </dl>
-
-    </div>
-
-    <div class="ruleset  spaced--large">
-
-        <h4 class="selector"><span class="modifier" data-namespace="job">btgs</span></h4>
-
-        <dl class="declarations">
-
-            <dt class="property">Company</dt>
-            <dd class="value"><span class="string">Braintags GmbH</span></dd>
-
-            <dt class="property">Title</dt>
-            <dd class="value"><span class="string">Software Developer</span></dd>
-
-            <dt class="property">From</dt>
-            <dd class="value"><span class="string">June, 2008</span></dd>
-
-            <dt class="property">To</dt>
-            <dd class="value"><span class="string">October, 2011</span></dd>
-
-            <dt class="property">Responsibilities</dt>
-            <dd class="value">
-                <ul class="value-list">
-                    <li><span class="string">Front-end Development</span></li>
-                    <li>UI</li>
-                    <li>MySQL</li>
-                    <li><span class="string">Database modelling</span></li>
-                    <li><span class="string">Customer Training</span></li>
-                    <li><span class="string">Customer Support</span></li></ul></dd>
 
 
-
-        </dl>
-
-    </div>
-
-    <h2 class="comment-block">
-        <span class="comment-block__line">Presentations</span>
-    </h2>
-
-    <div class="ruleset">
-
-        <h3 class="selector"><span class="modifier" data-namespace="RWD">PHPUG</span></h3>
-
-        <dl class="declarations">
-
-            <dt class="property">Slides</dt>
-            <dd class="value"><span class="url"><a href="http://de.slideshare.net/ChristophReinartz/was-nicht-passt-wird-responsive-gemacht" target="_blank">Slides</a></span></dd>
-
-            <dt class="property">When</dt>
-            <dd class="value"><span class="string">April, 2014</span></dd>
-
-            <dt class="property">Where</dt>
-            <dd class="value"><span class="string">PHP Usergroup Düsseldorf</span></dd>
-
-            <dt class="property">Name</dt>
-            <dd class="value"><span class="string">Was nicht passt wird responsive gemacht!</span></dd>
-
-            <dt class="property">Notes</dt>
-            <dd class="value">
-                <span class="string">This was my first talk in front of a bigger audience. About 80 people attended the talk and
-                i had a lot of fun. Received a lot of positive feedback afterwards.</span></dd>
-
-        </dl>
-
-    </div>
-
-    <div class="ruleset  spaced--large">
-
-        <h3 class="selector"><span class="modifier" data-namespace="RWD">OTSD</span></h3>
-
-        <dl class="declarations">
-
-            <dt class="property">Slides</dt>
-            <dd class="value"><span class="url"><a href="http://de.slideshare.net/ChristophReinartz/was-nicht-passt-wird-responsive-gemacht-extended-edition" target="_blank">Slides</a></span></dd>
-
-            <dt class="property">When</dt>
-            <dd class="value"><span class="string">September, 2014</span></dd>
-
-            <dt class="property">Where</dt>
-            <dd class="value"><span class="string">Learners Meetup Open Tech School Dortmund</span></dd>
-
-            <dt class="property">Name</dt>
-            <dd class="value"><span class="string">Was nicht passt wird responsive gemacht! Extended Edition</span></dd>
-
-        </dl>
-
-    </div>
 
 
 	</section>
+    <section id="speaker" class="speaker" data-center="background-position: 50% 0px;"
+             data-top-bottom="background-position: 50% -300px;"
+             data-bottom-top="background-position: 50% 300px;"
+             data-anchor-target="#speaker">
 
-    <p class="imprint">
-        <a href="imprint.html" target="_blank">Impressum</a>&nbsp; <a href="datenschutz.html" target="_blank">Datenschutz</a>
-    </p>
+        <h1  data-center="bottom: 200px; opacity: 1"
+             data-top="bottom: 1500px; opacity: 0"
+             data-anchor-target="#speaker h1">Speaker</h1>
+    </section>
 
+    <section id="about-2" class="about csscv">
+
+
+        <h2 class="comment-block">
+            <span class="comment-block__line">Talks & presentations</span>
+        </h2>
+
+        <div class="ruleset">
+
+            <h3 class="selector"><span class="modifier" data-namespace="RWD">PHPUG</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Slides</dt>
+                <dd class="value"><span class="url"><a href="http://de.slideshare.net/ChristophReinartz/was-nicht-passt-wird-responsive-gemacht" target="_blank">Slides</a></span></dd>
+
+                <dt class="property">When</dt>
+                <dd class="value"><span class="string">April, 2014</span></dd>
+
+                <dt class="property">Where</dt>
+                <dd class="value"><span class="string">PHP Usergroup Düsseldorf</span></dd>
+
+                <dt class="property">Name</dt>
+                <dd class="value"><span class="string">Was nicht passt wird responsive gemacht!</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset ">
+
+            <h3 class="selector"><span class="modifier" data-namespace="RWD">OTSD</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Slides</dt>
+                <dd class="value"><span class="url"><a href="http://de.slideshare.net/ChristophReinartz/was-nicht-passt-wird-responsive-gemacht-extended-edition" target="_blank">Slides</a></span></dd>
+
+                <dt class="property">When</dt>
+                <dd class="value"><span class="string">September, 2014</span></dd>
+
+                <dt class="property">Where</dt>
+                <dd class="value"><span class="string">Learners Meetup Open Tech School Dortmund</span></dd>
+
+                <dt class="property">Name</dt>
+                <dd class="value"><span class="string">Was nicht passt wird responsive gemacht! Extended Edition</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset  spaced--large">
+
+            <h3 class="selector"><span class="modifier" data-namespace="RWD">codetalks</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Slides</dt>
+                <dd class="value"><span class="string">TBD</span></dd>
+
+                <dt class="property">When</dt>
+                <dd class="value"><span class="string">October, 2014</span></dd>
+
+                <dt class="property">Where</dt>
+                <dd class="value"><span class="string">Code.talks 2014 Conference Hamburg</span></dd>
+
+                <dt class="property">Name</dt>
+                <dd class="value"><span class="string">Was nicht passt wird responsive gemacht! Conference Edition</span></dd>
+
+            </dl>
+
+        </div>
+        <p class="imprint">
+            <a href="imprint.html" target="_blank">Impressum</a>&nbsp; <a href="datenschutz.html" target="_blank">Datenschutz</a>&nbsp; <a href="http://janvt.com"  target="_blank">Photo Credits Jan van Thoor</a>
+        </p>
+
+    </section>
+    </section>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -299,7 +262,8 @@
     </script>
 
     <!-- build:js({app,.tmp}) js/main.js -->
-
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
     <script src="js/site.js"></script>
 
     <!-- endbuild -->
