@@ -148,8 +148,8 @@ ul, menu, dir
   background-attachment: fixed;
     //background-size: 100%;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_speak.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_speak.jpg', sizingMethod='scale')";
+  //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_cv.jpg', sizingMethod='scale');
+  //-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_cv.jpg', sizingMethod='scale')";
 
 
   @media only screen and (max-height: 479px)
