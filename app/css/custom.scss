@@ -1,11 +1,13 @@
 @import "mixin";
 
-body,html {
+body,
+html {
   height: 100%;
 }
 
 html {
   font: 300 90%/1.5 "Open Sans",sans-serif;
+
   @media only screen and (min-width: 767px) {
     font-size: 100%;
   }
@@ -17,17 +19,22 @@ body {
   line-height: 36px;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   line-height: 1.5;
 }
 
-dt, dd {
+dt,
+dd {
   line-height: 1.5;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -43,10 +50,14 @@ a:active {
 nav ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: none;
 }
 hr {
@@ -76,7 +87,9 @@ a:active {
   }
 }
 
-ul, menu, dir {
+ul,
+menu,
+dir {
   display: block;
   list-style-type: disc;
   -webkit-margin-before: 0px;
@@ -90,6 +103,7 @@ ul, menu, dir {
 .about {
   position: relative;
   @include disable-user-select;
+
   @media only screen and (max-height: 479px) {
     height: auto !important;
   }
@@ -171,6 +185,7 @@ ul, menu, dir {
     margin-top: -24px;
   }
 }
+
 .speaker {
   background-image: url("../img/bg_speak_small.jpg");
   background-repeat: no-repeat;
