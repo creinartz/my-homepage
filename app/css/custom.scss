@@ -1,29 +1,23 @@
 @import "mixin";
-body,html
-{
+
+body,html {
   height: 100%;
 }
-html
-{
-  font: 300 90%/1.5 "Open Sans",sans-serif;
 
-  @media only screen and (min-width: 767px)
-  {
+html {
+  font: 300 90%/1.5 "Open Sans",sans-serif;
+  @media only screen and (min-width: 767px) {
     font-size: 100%;
   }
 }
-body
-{
 
+body {
   background: #f5f6f7;
   color: #f0f1f2;
   line-height: 36px;
-
-
 }
 
-h1,h2,h3
-{
+h1,h2,h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -33,8 +27,7 @@ dt, dd {
   line-height: 1.5;
 }
 
-*, *:before, *:after
-{
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -42,26 +35,21 @@ dt, dd {
 }
 
 a:focus,
-a:active
-{
+a:active {
   border: 0;
   outline: 0;
 }
 
-nav ul
-{
+nav ul {
   list-style: none;
 }
-blockquote, q
-{
+blockquote, q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after
-{
+blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
-hr
-{
+hr {
   display: block;
   height: 1px;
   border: 0;
@@ -70,17 +58,14 @@ hr
   padding: 0;
 }
 
-
 a:link,
 a:visited,
-a:active
-{
+a:active {
   font-weight: 300;
   color: #f0f1f2;
   text-decoration: underline;
 
-  &:hover
-  {
+  &:hover {
     //color: #F3AE4E;
     color: #fff;
     -webkit-transition: color 1s;
@@ -91,8 +76,7 @@ a:active
   }
 }
 
-ul, menu, dir
-{
+ul, menu, dir {
   display: block;
   list-style-type: disc;
   -webkit-margin-before: 0px;
@@ -102,14 +86,11 @@ ul, menu, dir
   -webkit-padding-start: 0px;
 }
 
-
 .home,
-.about
-{
+.about {
   position: relative;
   @include disable-user-select;
-  @media only screen and (max-height: 479px)
-  {
+  @media only screen and (max-height: 479px) {
     height: auto !important;
   }
 }
@@ -139,12 +120,17 @@ ul, menu, dir
   @keyframes arrow-fade{from{bottom:48px;opacity:0}5%{opacity:1}to{bottom:0;opacity:0}
  }
 .speaker:after,
-.home:after
-{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.25)}
+.home:after {
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-color:rgba(0,0,0,.25)
+}
 
-
-.home
-{
+.home {
   //background: #F0F1F2;
   min-height: 100%;
   background-image: url("../img/bg_cv_small.jpg");
@@ -152,30 +138,25 @@ ul, menu, dir
   //background-position: 50% 50%;
   background-position: center center;
   background-attachment: fixed;
-    //background-size: 100%;
+  //background-size: 100%;
   background-size: cover;
   //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_cv.jpg', sizingMethod='scale');
   //-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg_cv.jpg', sizingMethod='scale')";
 
-
-  @media only screen and (max-height: 479px)
-  {
+  @media only screen and (max-height: 479px) {
     height: 480px !important;
   }
 
-  @media only screen and (min-width: 1025px)
-  {
+  @media only screen and (min-width: 1025px) {
     background-image: url("../img/bg_cv.jpg");
   }
-
 }
 
 .home,
-.speaker
-{
+.speaker {
   position: relative;
-  h1
-  {
+
+  h1 {
     position: absolute;
     top: 75%;
     right: 24px;
@@ -190,9 +171,7 @@ ul, menu, dir
     margin-top: -24px;
   }
 }
-.speaker
-{
-
+.speaker {
   background-image: url("../img/bg_speak_small.jpg");
   background-repeat: no-repeat;
   //background-position: 50% 50%;
@@ -202,14 +181,12 @@ ul, menu, dir
   background-size: cover;
   min-height: 100%;
 
-  @media only screen and (min-width: 1025px)
-  {
+  @media only screen and (min-width: 1025px) {
     background-image: url("../img/bg_speak.jpg");
   }
 }
 
-.social-links
-{
+.social-links {
   position: absolute;
   left: 24px;
   top: 24px;
@@ -217,26 +194,20 @@ ul, menu, dir
   margin: 0;
   z-index:9;
 
-  li
-  {
+  li {
     display: inline-block;
     font-size: 48px;
     font-size: 3rem;
     text-shadow: 1px 1px 8px #000;
     margin-right: 20px;
 
-    &:last-child
-    {
+    &:last-child {
       margin-right: 0;
     }
-
   }
 }
 
-
-
-.imprint
-{
+.imprint {
   text-align: center;
   width: 100%;
   background-color: #002b36;
@@ -245,17 +216,15 @@ ul, menu, dir
   bottom: 10px;
   left: 0;
   right: 0;
-  a
-  {
+
+  a {
     font-size: 10px;
     font-weight: 500;
     color: #aaa;
-
   }
 }
 
-.legal
-{
+.legal {
   width: 100%;
   height: 100%;
   text-align: left;
@@ -264,13 +233,11 @@ ul, menu, dir
   a:link,
   a:visited,
   a:focus
-  a:active
-  {
+  a:active {
     color: blue;
   }
 
-  h2
-  {
+  h2 {
     margin-top: 0;
     padding-top: 20px;
     margin-bottom: 10px;
