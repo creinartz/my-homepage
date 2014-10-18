@@ -5,16 +5,21 @@ body,html
 }
 html
 {
-  font-size: 100%;
+  font: 300 90%/1.5 "Open Sans",sans-serif;
+
+  @media only screen and (min-width: 767px)
+  {
+    font-size: 100%;
+  }
 }
 body
 {
-  //font-family: 'Open Sans', sans-serif;
-  font: 300 100%/1.5 "Open Sans",sans-serif;
+
   background: #f5f6f7;
   color: #f0f1f2;
   line-height: 36px;
-  //font-weight: 300;
+
+
 }
 
 h1,h2,h3
@@ -215,10 +220,10 @@ ul, menu, dir
   li
   {
     display: inline-block;
+    font-size: 48px;
     font-size: 3rem;
     text-shadow: 1px 1px 8px #000;
     margin-right: 20px;
-
 
     &:last-child
     {
