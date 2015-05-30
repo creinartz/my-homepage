@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    {% block meta %}
+        {% include "partials/_meta.twig" %}
+    {% endblock %}
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Christoph Reinartz - Front-end Developer</title>
+
+    {% block stylesheets %}
+        {% include  "partials/_stylesheets.twig"%}
+    {% endblock %}
+
+    {% block headjs %}
+        {% include "partials/_headjs.twig" %}
+    {% endblock %}
+</head>
+<body >
+    {% block content %}{% endblock %}
+
+{% block blockingjs %}
+    {% include "partials/_blockingjs.twig" %}
+{% endblock %}
+</body>
+</html>

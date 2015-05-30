@@ -15,7 +15,31 @@ module.exports = function(grunt) {
             app: 'app',
             dist: 'dist'
         },
-
+        twigRender: {
+            options: {
+                // Task-specific options go here.
+            },
+            toapp: {
+                options: {
+                    // Target specific options go here
+                },
+                files : [
+                    {
+                        data: {
+                            greeting: "Hello",
+                            target: "world"
+                        },
+                        //template: "<%= creinartz.app %>/index.twig",
+                        //dest: "<%= creinartz.app %>/index.html"
+                        expand: true,
+                        cwd: "<%= creinartz.app %>",
+                        src: ['**/*.twig', '!**/_*.twig'], // Match twig templates but not partials
+                        dest: '<%= creinartz.app %>',
+                        ext: '.html'   // index.twig + datafile.json => index.html
+                }
+            ]
+            }
+        },
         pkg: grunt.file.readJSON('package.json'),
 
 //        uglify: {
@@ -152,6 +176,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'build', [
         'clean:dist',
+        'twigRender',
         'useminPrepare',
         'copy:styles',
         'pleeease',
