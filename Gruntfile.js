@@ -85,6 +85,20 @@ module.exports = function(grunt) {
                 src: '{,*/}*.css'
             }
         },
+        pleeease: {
+            custom: {
+                options: {
+                    autoprefixer: {'browsers': ['last 4 versions', 'ios 6']},
+                    filters: {'oldIE': true},
+                    rem: ['12px'],
+                    minifier: false,
+                    mqpacker: true
+                },
+                files: {
+                    '.tmp/css/custom.css': '.tmp/css/custom.css'
+                }
+            }
+        },
         // Renames files for browser caching purposes
         rev: {
             dist: {
@@ -140,6 +154,7 @@ module.exports = function(grunt) {
         'clean:dist',
         'useminPrepare',
         'copy:styles',
+        'pleeease',
         'imagemin',
         'concat',
         'cssmin',
