@@ -1,0 +1,318 @@
+/**
+ * @description
+ * Generates background rgba with background ie fallback
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include background-rgba(#333, 0.5);
+ *   }
+ */
+/**
+ * @description
+ * Disables user selection on element
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include disable-user-select;
+ *   }
+ */
+/**
+ * @description
+ * Generates opacity properties for most browsers.
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include opacity(0.5);
+ *   }
+ */
+/**
+ * @description
+ * Produces text-overflow ellipsis on one line text
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include text-overflow-ellipsis;
+ *   }
+ */
+/**
+ * @description
+ * Generates transform properties
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include transform(rotate(-45deg));
+ *   }
+ */
+/**
+ * @description
+ * Generates transition properties
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include transition(all 0.5s ease-in);
+ *   }
+ */
+/**
+ * @description
+ * super fancy vertical align
+ *
+ * @author creinartz
+ * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ *
+ * @example
+ *   .selector {
+ *     @include vertical-align;
+ *   }
+ */
+@-webkit-keyframes arrow-fade {
+  from {
+    bottom: 48px;
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+@-moz-keyframes arrow-fade {
+  from {
+    bottom: 48px;
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+@keyframes arrow-fade {
+  from {
+    bottom: 48px;
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+/* clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/* oocss */
+.text-center {
+  text-align: center; }
+
+body,
+html {
+  height: 100%; }
+
+html {
+  font: 300 90%/1.5 "Open Sans", sans-serif; }
+  @media only screen and (min-width: 767px) {
+    html {
+      font-size: 100%; } }
+
+body {
+  background: #f5f6f7;
+  color: #ccc;
+  line-height: 36px; }
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.5; }
+
+dt,
+dd {
+  line-height: 1.5; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none; }
+
+a:focus,
+a:active {
+  border: 0;
+  outline: 0; }
+
+nav ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+a:link,
+a:visited,
+a:active {
+  font-weight: 300;
+  color: #ccc;
+  text-decoration: underline; }
+  a:link:hover,
+  a:visited:hover,
+  a:active:hover {
+    color: #fff;
+    transition: color 1s; }
+
+ul,
+menu,
+dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px; }
+
+.header,
+.footer {
+  position: relative;
+  background-color: #666; }
+
+.ulist--social {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  padding: 0;
+  margin: 0;
+  z-index: 9; }
+.ulist__listitem {
+  display: inline-block; }
+  .ulist--social .ulist__listitem {
+    font-size: 48px;
+    font-size: 3rem;
+    text-shadow: 1px 1px 8px #000;
+    margin-right: 20px; }
+    .ulist--social .ulist__listitem:last-child {
+      margin-right: 0; }
+  .ulist--footer .ulist__listitem {
+    padding: 0 5px; }
+.ulist__link {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ccc; }
+  .ulist__link:link, .ulist__link:visited, .ulist__link:hover, .ulist__link:active {
+    color: #ccc; }
+
+.home,
+.about {
+  position: relative;
+  user-select: none; }
+  @media only screen and (max-height: 479px) {
+    .home,
+    .about {
+      height: auto !important; } }
+
+/* home block */
+.home:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border: 0 solid #f0f1f2;
+  border-width: 0 5px 5px 0;
+  text-shadow: 1px 1px 8px #000;
+  opacity: 0;
+  animation: arrow-fade 1.5s .5s 1 linear;
+  transform: rotate(45deg) translate3d(0, 0, 0); }
+
+.speaker:after,
+.home:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25); }
+
+.home {
+  min-height: 100%;
+  background-image: url("../img/bg_cv_small.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+  @media only screen and (max-height: 479px) {
+    .home {
+      height: 480px !important; } }
+  @media only screen and (min-width: 1025px) {
+    .home {
+      background-image: url("../img/bg_cv.jpg"); } }
+
+.home,
+.speaker {
+  position: relative; }
+  .home .hero,
+  .speaker .hero {
+    position: absolute;
+    top: 75%;
+    right: 24px;
+    left: 24px;
+    z-index: 1;
+    text-align: center;
+    margin-top: -24px; }
+    .home .hero > h1,
+    .speaker .hero > h1 {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0; }
+    .home .hero > h1, .home .hero h2,
+    .speaker .hero > h1,
+    .speaker .hero h2 {
+      font-weight: 600;
+      text-shadow: 1px 1px 8px #000; }
+
+.speaker {
+  background-image: url("../img/bg_speak_small.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%; }
+  @media only screen and (min-width: 1025px) {
+    .speaker {
+      background-image: url("../img/bg_speak.jpg"); } }
+
+/*# sourceMappingURL=base.css.map */

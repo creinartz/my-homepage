@@ -6,3 +6,5 @@ dist/
 node_modules/
 bower_components/
 .sass-cache/
+app/imprint.twig
+app/imprint.html

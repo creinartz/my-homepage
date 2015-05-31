@@ -12,7 +12,8 @@ html {
 
 body {
 	background: #f5f6f7;
-	color: #f0f1f2;
+	//color: #f0f1f2;
+	color: #ccc;
 	line-height: 36px;
 }
 
@@ -72,7 +73,8 @@ a:link,
 a:visited,
 a:active {
 	font-weight: 300;
-	color: #f0f1f2;
+	//color: #f0f1f2;
+	color: #ccc;
 	text-decoration: underline;
 
 	&:hover {
@@ -93,29 +95,10 @@ dir {
 	-webkit-padding-start: 0px;
 }
 
-footer {
+.header,
+.footer {
 	position: relative;
 	background-color: #666;
-}
-
-.legal {
-	width: 100%;
-	height: 100%;
-	text-align: left;
-	color: #333;
-
-	a:link,
-	a:visited,
-	a:focus
-	a:active {
-		color: blue;
-	}
-
-	h2 {
-		margin-top: 0;
-		padding-top: 20px;
-		margin-bottom: 10px;
-	}
 }
 
 
