@@ -142,3 +142,12 @@ $browser-context: 16; // Default
 {
   @return #{$pixels/$context}em
 }
+
+@mixin linx ($color) {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $color;
+    }
+}
