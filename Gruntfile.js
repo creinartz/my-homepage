@@ -169,8 +169,20 @@ module.exports = function(grunt) {
                     dest: '<%= creinartz.dist %>'
                 }]
             }
+        },
+        criticalcss: {
+            custom: {
+                options: {
+                    url: "http://localhost/~christophreinartz/my-homepage/app/index.html",
+                    width: 1200,
+                    height: 900,
+                    outputfile: "dist/critical.css",
+                    filename: "dist/css/main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    buffer: 800*1024,
+                    ignoreConsole: false
+                }
+            }
         }
-
     });
 
     grunt.registerTask(
@@ -185,8 +197,9 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
-        'rev',
+        //'rev',
         'usemin',
+        'criticalcss',
         'htmlmin'
     ]);
 
