@@ -273,7 +273,7 @@ dir {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover; }
-  @media only screen and (max-height: 479px) {
+  @media only screen and (max-height: 480px) {
     .home {
       height: 480px !important; } }
   @media only screen and (min-width: 1025px) {
@@ -292,6 +292,10 @@ dir {
     z-index: 1;
     text-align: center;
     margin-top: -24px; }
+    @media only screen and (max-height: 640px) {
+      .home .hero,
+      .speaker .hero {
+        top: 65%; } }
     .home .hero > h1,
     .speaker .hero > h1 {
       font-size: 48px;
