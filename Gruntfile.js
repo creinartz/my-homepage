@@ -155,7 +155,7 @@ module.exports = function(grunt) {
                 options: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
-                    removeAttributeQuotes: true,
+                    removeAttributeQuotes: false,
                     removeCommentsFromCDATA: true,
                     removeEmptyAttributes: true,
                     removeOptionalTags: true,
@@ -168,6 +168,26 @@ module.exports = function(grunt) {
                     src: '{,*/}*.html',
                     dest: '<%= creinartz.dist %>'
                 }]
+            }
+        },
+
+        inline: {
+            dist: {
+                src: 'dist/index.html',
+                dest: 'dist/index.html'
+            }
+        },
+        "regex-replace": {
+            foofoo: { //specify a target with any name
+                src: ['dist/index.html'],
+                actions: [
+                    {
+                        name: 'bar',
+                        search: 'main.css',
+                        replace: 'main.css?__inline=true',
+                        flags: 'g'
+                    }
+                ]
             }
         }
 
@@ -187,7 +207,9 @@ module.exports = function(grunt) {
         'copy:dist',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'regex-replace',
+        'inline'
     ]);
 
 };

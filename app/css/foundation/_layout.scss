@@ -4,7 +4,10 @@ html {
 }
 
 html {
-	font: 300 90%/1.5 "Open Sans", sans-serif;
+	font-size: 90%;
+	font-weight: 300;
+	line-height: 1.5;
+	font-family: monospace, monospace;
 	@media only screen and (min-width: 767px) {
 		font-size: 100%;
 	}
