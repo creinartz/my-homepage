@@ -128,7 +128,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     src: [
-                        '<%= creinartz.dist %>/js/{,*/}*.js',
+                        //'<%= creinartz.dist %>/js/{,*/}*.js',
                         '<%= creinartz.dist %>/css/{,*/}*.css'
                     ]
                 }
@@ -180,10 +180,10 @@ module.exports = function(grunt) {
         'useminPrepare',
         'copy:styles',
         'pleeease',
-        'imagemin',
+        //'imagemin',
         'concat',
         'cssmin',
-        'uglify',
+        //'uglify',
         'copy:dist',
         'rev',
         'usemin',
