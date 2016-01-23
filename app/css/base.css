@@ -133,8 +133,7 @@ html {
 
 body {
   background: #f5f6f7;
-  color: #ccc;
-  line-height: 36px; }
+  color: #ccc; }
 
 h1,
 h2,
@@ -218,9 +217,6 @@ dir {
 .ulist__listitem {
   display: inline-block; }
   .ulist--social .ulist__listitem {
-    font-size: 48px;
-    font-size: 3rem;
-    text-shadow: 1px 1px 8px #000;
     margin-right: 20px; }
     .ulist--social .ulist__listitem:last-child {
       margin-right: 0; }

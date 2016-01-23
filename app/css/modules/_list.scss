@@ -11,9 +11,6 @@ $module-ulist: 'ulist';
 	&__listitem {
 		display: inline-block;
 		.#{$module-ulist}--social & {
-			font-size: 48px;
-			font-size: 3rem;
-			text-shadow: 1px 1px 8px #000;
 			margin-right: 20px;
 			&:last-child {
 				margin-right: 0;
