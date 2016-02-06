@@ -8,6 +8,13 @@
 	}
 }
 
+.home,
+.speaker,
+.hero {
+	transform-style: preserve-3d;
+	transform: translateZ(0);
+}
+
 /* home block */
 .home:before {
 	content: "";
@@ -39,17 +46,44 @@
 
 .home {
 	min-height: 100%;
-	background-image: url("../img/bg_cv_small.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
+
 	@media only screen and (max-height: 480px) {
 		height: 480px !important;
 	}
 
+
+}
+
+.slide-bg {
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+
 	@media only screen and (min-width: 1025px) {
-		background-image: url("../img/bg_cv.jpg");
+		transform: translateZ(-150px) scale(1.1);
+		transform-origin: 100% 100%;
+	}
+
+	&--hero {
+		background-image: url("../img/bg_cv_small.jpg");
+		@media only screen and (min-width: 1025px) {
+			background-image: url("../img/bg_cv.jpg");
+		}
+	}
+
+	&--speaker {
+		background-image: url("../img/bg_speak_small.jpg");
+		@media only screen and (min-width: 1025px) {
+			background-image: url("../img/bg_speak.jpg");
+		}
 	}
 }
 
@@ -85,16 +119,5 @@
 }
 
 .speaker {
-	background-image: url("../img/bg_speak_small.jpg");
-	background-repeat: no-repeat;
-	//background-position: 50% 50%;
-	background-position: center center;
-	background-attachment: fixed;
-	//background-size: 100%;
-	background-size: cover;
 	min-height: 100%;
-
-	@media only screen and (min-width: 1025px) {
-		background-image: url("../img/bg_speak.jpg");
-	}
 }

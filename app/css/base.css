@@ -133,7 +133,8 @@ html {
 
 body {
   background: #f5f6f7;
-  color: #ccc; }
+  color: #ccc;
+  touch-action: auto; }
 
 h1,
 h2,
@@ -148,8 +149,6 @@ dd {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none; }
 
@@ -196,11 +195,7 @@ menu,
 dir {
   display: block;
   list-style-type: disc;
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px; }
+  margin: 0; }
 
 .header,
 .footer {
@@ -238,6 +233,12 @@ dir {
     .about {
       height: auto !important; } }
 
+.home,
+.speaker,
+.hero {
+  transform-style: preserve-3d;
+  transform: translateZ(0); }
+
 /* home block */
 .home:before {
   content: "";
@@ -266,18 +267,36 @@ dir {
   background-color: rgba(0, 0, 0, 0.25); }
 
 .home {
-  min-height: 100%;
-  background-image: url("../img/bg_cv_small.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
+  min-height: 100%; }
   @media only screen and (max-height: 480px) {
     .home {
       height: 480px !important; } }
+
+.slide-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
   @media only screen and (min-width: 1025px) {
-    .home {
-      background-image: url("../img/bg_cv.jpg"); } }
+    .slide-bg {
+      transform: translateZ(-150px) scale(1.1);
+      transform-origin: 100% 100%; } }
+  .slide-bg--hero {
+    background-image: url("../img/bg_cv_small.jpg"); }
+    @media only screen and (min-width: 1025px) {
+      .slide-bg--hero {
+        background-image: url("../img/bg_cv.jpg"); } }
+  .slide-bg--speaker {
+    background-image: url("../img/bg_speak_small.jpg"); }
+    @media only screen and (min-width: 1025px) {
+      .slide-bg--speaker {
+        background-image: url("../img/bg_speak.jpg"); } }
 
 .home,
 .speaker {
@@ -308,14 +327,6 @@ dir {
       text-shadow: 1px 1px 8px #000; }
 
 .speaker {
-  background-image: url("../img/bg_speak_small.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
   min-height: 100%; }
-  @media only screen and (min-width: 1025px) {
-    .speaker {
-      background-image: url("../img/bg_speak.jpg"); } }
 
 /*# sourceMappingURL=base.css.map */

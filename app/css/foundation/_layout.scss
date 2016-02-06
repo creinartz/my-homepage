@@ -17,6 +17,7 @@ body {
 	background: #f5f6f7;
 	//color: #f0f1f2;
 	color: #ccc;
+	touch-action: auto;
 }
 
 h1,
@@ -34,8 +35,6 @@ dd {
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	border: none;
 }
@@ -90,11 +89,7 @@ menu,
 dir {
 	display: block;
 	list-style-type: disc;
-	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	-webkit-padding-start: 0px;
+	margin: 0;
 }
 
 .header,
